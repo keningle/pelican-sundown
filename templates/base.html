@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="{{ DEFAULT_LANG }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>{% block title %}{% endblock %} KenIngle.com</title>
+
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/{{ CSS_FILE }}">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div><img src="{{ GRV_URL }}" class="grv-img"/></div>
+        <div class="title"><a href="{{ SITEURL }}/">{{ SITENAME }} </a></div>
+        <div class="sub-title">{% if SITESUBTITLE %}{{ SITESUBTITLE }}{% endif %}</div>
+
+        {% include 'sidebar.html' %}
+
+      </header>
+      <section>
+      {% block content %}
+
+      {% endblock %}
+      </section>
+      <footer>
+        <p><small>&copy; {{ SITENAME }} &mdash; Theme based on Sundown by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <!-- Scale fix -->
+    <script>
+      var metas = document.getElementsByTagName('meta');
+      var i;
+      
+      if (navigator.userAgent.match(/iPhone/i)) {
+        for (i=0; i<metas.length; i++) {
+          if (metas[i].name == "viewport") {
+            metas[i].content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
+          }
+        }
+      
+        document.addEventListener("gesturestart", gestureStart, false);
+      }
+
+      function gestureStart() {
+        for (i=0; i<metas.length; i++) {
+          if (metas[i].name == "viewport") {
+            metas[i].content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

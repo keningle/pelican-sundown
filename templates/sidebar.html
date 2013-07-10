@@ -1,0 +1,20 @@
+{% if DISPLAY_PAGES_ON_MENU -%}
+<p>
+  {% for page in PAGES %}
+    <div class="view"><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></div>
+  {% endfor %}
+  <div class="view"><a href="{{ SITEURL }}/archives.html">Archives</a></div>
+</p>
+{% endif %}
+
+<!-- Social links -->
+{% if SOCIAL %}
+<div class="social">
+<h4>Follow Me</h4>
+<ul>
+  {% for name, link in SOCIAL %}
+    <li><a href="{{ link }}">{{ name }}</a></li>
+  {% endfor %}
+</ul>
+</div>
+{% endif %}
