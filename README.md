@@ -1,10 +1,9 @@
-Pelican-Sundown
-===============
+# Pelican-Sundown
 
 A flexible [pelican](http://docs.getpelican.com) based on the [github
 pages](https://github.com/orderedlist) sundown theme created originally by [orderedlist](http://pages.github.com/).
 
-# Configuration
+## Configuration
 
 This theme does have a few differences from the original sundown theme.
 For example, slightly larger font for content, gravatar image, and
@@ -13,7 +12,7 @@ social icons.
 Additions such as gravatar are not required, but available.  The
 following settings should be added/adjusted in the `pelicanconf.py`:
 
-## Gravatar
+### Gravatar
 
 You can include a gravatar image in the top left of the template by
 adding the following lines to your config:
@@ -31,6 +30,6 @@ GRV_URL = "http://www.gravatar.com/avatar/" + hashlib.md5(EMAIL.lower()).hexdige
 GRV_URL += urllib.urlencode({'d':DEFAULT_GRV_URL, 's':str(GRV_SIZE)})
 ``` 
 
-# Who is using pelican-sundown
+## Who is using pelican-sundown
 
 * [KenIngle.com](http://keningle.com) - Hosted on github pages
