@@ -161,6 +161,7 @@ div[class='social'] a {
 .social a[href*='git.io'] {background-image: url('../images/icons/github.png');}
 .social a[href*='gittip.com'] {background-image: url('../images/icons/gittip.png');}
 .social a[href*='plus.google.com'] {background-image: url('../images/icons/google-plus.png');}
+.social a[href*='google.com/\+'] {background-image: url('../images/icons/google-plus.png');}
 .social a[href*='groups.google.com'] {background-image: url('../images/icons/google-groups.png');}
 .social a[href*='news.ycombinator.com'],
 .social a[href*='hackernewsers.com'] {background-image: url('../images/icons/hackernews.png');}
